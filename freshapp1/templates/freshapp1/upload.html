@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload a Voice Note</title>
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'freshapp1/css/style.css' %}">
+</head>
+<body>
+    <h2>Upload a Voice Note</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- This will render all fields properly -->
+
+        <button type="submit">Upload</button>
+    </form>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

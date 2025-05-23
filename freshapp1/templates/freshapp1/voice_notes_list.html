@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice Notes</title>
+</head>
+<body>
+    <h1>All Voice Notes</h1>
+    
+    {% if notes %}
+        <ul>
+            {% for note in notes %}
+                <li>
+                    <strong>{{ note.title }}</strong> - Uploaded by {{ note.user.username }}<br>
+                    <audio controls>
+                        <source src="{{ note.audio.url }}" type="audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                        {% if request.user == voicenote.user %}
+                            <form action="{% url 'delete_voicenote' voicenote.id %}" method="post" style="display:inline;">
+                                {% csrf_token %}
+                                    <button type="submit">Delete</button>
+                            </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No voice notes available.</p>
+    {% endif %}
+</body>
+</html>

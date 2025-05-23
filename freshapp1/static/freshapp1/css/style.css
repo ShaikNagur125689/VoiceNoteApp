@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: white; /* Clean White Background */
+    color: #1E1E2F; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Centered Title - "Voice Notes" */
+.header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold for a premium look */
+    margin-top: 20px;
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1E1E2F;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05); /* Light Transparent Box */
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Auth Links (Register, Login, Logout) - Right Edge */
+.auth-links {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Moved to the right edge */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #1E1E2F; /* Dark buttons for contrast */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    width: 120px;
+    transition: 0.3s;
+}
+
+.auth-links a:hover {
+    background-color: #FFD700; /* Gold on hover */
+    color: #1E1E2F;
+}
+
+/* Uploaded Voice Notes Section */
+.voice-notes-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.voice-notes-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1E1E2F;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Voice Notes (2 Columns) */
+.voice-notes-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Individual Voice Note Box */
+.voice-note {
+    background: rgba(0, 0, 0, 0.05); /* Light Transparent Card */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.voice-note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.6); /* Gold Glow */
+}
+
+/* Audio Player */
+.voice-note audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.helptext {
+    margin-left: 5px; /* Adjust this value as needed */
+    font-size: 1px; /* Make it slightly smaller */
+    color: white /* Optional: Light gray color to make it less noticeable */
+}
